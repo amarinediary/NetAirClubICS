@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>NetAirClubICS</title>
+</head>
+
+<body class="user-select-none">
+    <main class="container py-5">
+        <form type="POST" class="card">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="form-floating">
+                        <select id="aeroclub" name="aeroclub" class="form-select text-capitalize" required>
+                            <option value="acvl" id="acvl">aéroclub de la vallée du loing</option>
+                            <option value="acbourges" id="acbourges">aéroclub vol moteur bourges</option>
+                            <option value="acsommer" id="acsommer">aéroclub roger sommer</option>
+                            <option value="acbelves" id="acbelves">aéroclub belves périgord</option>
+                            <option value="acquercy" id="acquercy">aéroclub du quercy</option>
+                            <option value="acdelatranche" id="acdelatranche">aéroclub de la tranche sur mer</option>
+                            <option value="acrouergue" id="acrouergue">aéroclub du rouergue</option>
+                            <option value="acpaulmetairie" id="acpaulmetairie">aéroclub paul métairie la flèche</option>
+                            <option value="aproannais" id="aproannais">amicale des pilotes du roannais</option>
+                            <option value="acroyansoulac" id="acroyansoulac">aéroclub de royan et soulac</option>
+                            <option value="acdandaines" id="acdandaines">aéroclub d'andaines</option>
+                            <option value="clap73" id="clap73">aéroclub clap 73 challes les eaux</option>
+                            <option value="acdeauville" id="acdeauville">aéroclub de deauville</option>
+                            <option value="acfigari" id="acfigari">aéroclub figari sud corse</option>
+                            <option value="ulmloisirmontargis" id="ulmloisirmontargis">ULM Loisir Montargis</option>
+                            <option value="acol" id="acol">aéroclub du loiret orléans</option>
+                            <option value="unac" id="unac">union aérienne de chateauneuf sur cher</option>
+                            <option value="accosne" id="accosne">aéroclub de cosne sur loire</option>
+                            <option value="acdieppe" id="acdieppe">aéroclub de dieppe</option>
+                            <option value="lesailesardennaises" id="lesailesardennaises">aéroclub des ailes ardennaises
+                            </option>
+                            <option value="acangerien" id="acangerien">aéroclub angérien</option>
+                            <option value="acpons" id="acpons">aéroclub de pons</option>
+                            <option value="acbf" id="acbf">aéroclub brest finistère</option>
+                            <option value="acjeanmermoz" id="acjeanmermoz">aéroclub jean mermoz de ribérac</option>
+                            <option value="royanaircraft" id="royanaircraft">royan aircraft</option>
+                            <option value="caroannais" id="caroannais">club aéronautique roannais</option>
+                            <option value="acgrandslacs" id="acgrandslacs">aéroclub des grands lacs</option>
+                            <option value="enac" id="enac">aéroclub de biscarrosse des personnels de l'ENAC</option>
+                            <option value="acaubigny" id="acaubigny">aéroclub de aubigny sur nère</option>
+                            <option value="acmp" id="acmp">aéroclub de marseille provence</option>
+                            <option value="martiniqueeasyfly" id="martiniqueeasyfly">aéroclub martinique easyfly
+                            </option>
+                            <option value="aclucon" id="aclucon">aéroclub des voureuils luçon chasnais</option>
+                            <option value="acfontenay" id="acfontenay">aéroclub de fontenay le comte</option>
+                            <option value="ulmevasion" id="ulmevasion">ULM Evasion</option>
+                            <option value="lac" id="lac">aéroclub de libourne</option>
+                            <option value="accomminges" id="accomminges">aéroclub du comminges</option>
+                        </select>
+                        <label for="aeroclub">Aeroclub</label>
+                    </div>
+                </li>
+                <li class="list-group-item border-bottom-0">
+                    <div class="form-floating">
+                        <input type="text" id="login" name="login" class="form-control is-invalid" placeholder="Login"
+                            required>
+                        <label for="login">Login</label>
+                    </div>
+                </li>
+                <li class="list-group-item border-bottom-0">
+                    <div class="form-floating">
+                        <input type="password" id="password" name="password" class="form-control is-invalid"
+                            placeholder="Password" required>
+                        <label for="password">Password</label>
+                    </div>
+                </li>
+                <li class="list-group-item border-bottom-0">
+                    <div id="submit-container" class="d-grid">
+                        <button type="submit" id="submit" name="submit"
+                            class="btn btn-success btn-lg text-truncate pe-none" disabled="true" readonly="true">
+                            Mettez à jour vôtre calendrier <span class="badge bg-light text-dark">.ics</span>, <u>+31
+                                jours glissant</u>
+                        </button>
+                    </div>
+                    <div id="subscribe-container" class="d-grid position-relative d-none">
+                        <a href="#!" id="subscribe" class="btn btn-primary btn-lg text-truncate">
+                            Abonnez-vous à vôtre calendrier <span class="badge bg-light text-dark">.ics</span>, via
+                            <u>webcall://</u>, (si ce n'est pas déjà le cas)
+                        </a>
+                        <span id="subscribe-feedback-counter"
+                            class="position-absolute top-0 translate-middle-y badge rounded-pill bg-danger border border-white border-2"
+                            style="right:-10px;">
+                        </span>
+                    </div>
+                </li>
+                <li class="list-group-item d-grid">
+                    <button type="button" class="btn btn-outline-danger btn-lg text-truncate"
+                        onclick="location.reload()">
+                        Reset
+                    </button>
+                </li>
+            </ul>
+        </form>
+
+        <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3"></div>
+
+        <div id="loader"
+            class="position-fixed start-0 top-0 end-0 bottom-0 d-flex flex-column align-items-center justify-content-center d-none"
+            style="background-color:rgba(33,37,41,.7);z-index:999;">
+            <span class="">
+                <span class="spinner-border text-light" role="status"></span>
+            </span>
+            <span id="loader-feedback" class="text-white">Connexion au NetAirClub</span>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "netairclubics",
+  "version": "1.0.0",
+  "description": "Unofficial `.ics` add to calendar file generator, for the NetAirClub® https://www.netairclub.com/ software.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ics": "^2.31.0",
+    "moment": "^2.29.1",
+    "package.json": "^2.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
