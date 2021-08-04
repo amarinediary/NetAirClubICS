@@ -193,18 +193,24 @@ let scraper = async (aeroclub, login, password, host) => {
                      * @see https://github.com/adamgibbons/ics#attributes
                      */
                     events.push({
+                        start: start,
+                        startInputType: `local`,
+                        startOutputType: `local`,
+                        end: end,
+                        endInputType: `local`,
+                        endOutputType: `local`,
                         title: `✈️ Réservation ${booking[0]}`,
                         description: description,
-                        start: start,
-                        end: end,
                         location: location,
-                        alarms: alarms,
-                        busyStatus: `BUSY`,
-                        method: `PUBLISH`,
                         url: netairclub.index,
+                        status: `CONFIRMED`,
+                        categories: [`flight`,],
+                        alarms: alarms,
                         productId: `NetAirClubICS`,
-                        calName: `NetAirClubICS`,
+                        method: `PUBLISH`,
                         sequence: 1,
+                        busyStatus: `BUSY`,
+                        calName: `NetAirClubICS`,
                     });
                 };
 
