@@ -143,4 +143,5 @@ $(() => {
 function clipboard(element) {
     $(element).select();
     document.execCommand(`copy`);
+    window.getSelection().removeAllRanges();
 };
