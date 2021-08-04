@@ -110,7 +110,7 @@
                                     class="badge bg-light text-dark">.ics</span></h5>
                             <p class="card-text">
                                 <span class="text-danger">Vous êtes déja abonnez? Vous n'avez rien à faire!</span><br>
-                                Sinon: 
+                                Sinon:
                             <ol>
                                 <li>Cliquer sur le boutton d'abonnement <u>webcal://</u></li>
                                 <li>Suivez les instructions à l'écran pour ajouter vôtre calendrier</li>
@@ -155,13 +155,17 @@
                         </div>
                         <ul class="list-group list-group-flush border-top-0">
                             <li class="list-group-item">
-                                <div class="d-grid position-relative">
+                                <div class="input-group w-100">
                                     <input type="url" id="webcal-input" class="form-control" readonly>
-                                    <span
-                                        class="events-counter position-absolute top-0 translate-middle-y badge rounded-pill bg-danger border border-white border-2"
-                                        style="right:-10px;">
-                                        0+
-                                    </span>
+                                    <div class="position-relative">
+                                        <button type="button" class="btn btn-success"
+                                            onclick="clipboard('#webcal-input');">Copier</button>
+                                        <span
+                                            class="events-counter position-absolute top-0 translate-middle-y badge rounded-pill bg-danger border border-white border-2"
+                                            style="right:-10px;z-index:99;">
+                                            0+
+                                        </span>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -180,7 +184,9 @@
             </span>
         </div>
 
-        <p class="mt-3 text-center"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfJlmh6h8bczuHUULC9I_sbsDDOlBkb9l6So9Q-D7TiMxuIcw/viewform?usp=pp_url" target="_blank" rel="noopener">👋 Un projet? Contactez moi!</a></p>
+        <p class="mt-3 text-center"><a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfJlmh6h8bczuHUULC9I_sbsDDOlBkb9l6So9Q-D7TiMxuIcw/viewform?usp=pp_url"
+                target="_blank" rel="noopener">👋 Un projet? Contactez moi!</a></p>
 
     </main>
 
