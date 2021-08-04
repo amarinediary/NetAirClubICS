@@ -112,11 +112,11 @@ $(() => {
                     } else {
                         $('.toast-container').append(`<div id="toast-${stamp}" class="toast align-items-center text-white bg-success border-0 mb-3 hide" style="max-width:100%;"><div class="d-flex"><div class="toast-body text-truncate"><u>${response.found} réservations</u> trouvées.</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button></div></div>`);
 
-                        $('#subscribe-container').removeClass('d-none');
-                        $('#subscribe').attr('href', response.webcal);
-                        $('#subscribe-feedback-counter').html(`${response.found}+`);
-    
-                        $('#submit-container').addClass('d-none');
+                        $('#results').removeClass('d-none');
+
+                        $('#webcal-href').attr('href', response.webcal);
+                        $('#webcal-input').val(response.webcal);
+                        $('.events-counter').html(`${response.found}+`);
                     };
 
                     new bootstrap.Toast($(`#toast-${stamp}`)).show();
