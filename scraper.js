@@ -136,10 +136,14 @@ let scraper = async (aeroclub, login, password, host) => {
 
                 for (let booking of bookings) {
                     let start = constants.sanitize_start(booking[1]);
+                    //console.log(start);
                     start = [`20${start[2]}`, start[1], start[0], start[3], start[4],].map(i => Number(i));
+                    console.log(start);
 
                     let end = constants.sanitize_end(booking[1]);
+                    //console.log(end);
                     end = [`20${end[2]}`, end[1], end[0], end[3], end[4],].map(i => Number(i));
+                    console.log(end);
 
                     let destination;
                     if (booking[1].includes(`Destination:`)) {
