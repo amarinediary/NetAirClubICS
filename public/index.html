@@ -11,7 +11,7 @@
     <title>NetAirClubICS</title>
 </head>
 
-<body>
+<body class="user-select-none">
     <main class="container" style="max-width: 960px;">
 
         <button class="btn btn-primary my-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMain" aria-controls="offcanvasMain" style="height:40px;">
@@ -106,17 +106,17 @@
             <div class="d-grid mb-3">
                 <button type="submit" id="submit" name="submit" class="btn btn-success text-truncate pe-none"
                     disabled="true" readonly="true" style="height:40px;">
-                    Mettez à jour votre calendrier, <u>+31 jours glissant</u>
+                    Mettez à jour votre agenda, <u>+31 jours glissant</u>
                 </button>
             </div>
         </form>
 
         <h5 class="text-muted">2.</h5>
         <p class="text-danger">Vous êtes déjà abonné•e•s? Vous n'avez plus rien à faire!</p>
-        <p><pre class="d-inline" style="background-color:#F8FBB8;">(IOS, macOS)</pre> Abonnez-vous à votre calendrier en un clic</p>
+        <p><pre class="d-inline" style="background-color:#F8FBB8;">(IOS, macOS)</pre> Abonnez-vous à votre agenda en un clic</p>
         <div class="d-grid mb-3 position-relative">
             <a href="#!" id="webcal" class="btn btn-primary text-truncate pe-none disabled" style="height:40px;" disabled="true" readonly="true" target="_blank" rel="noopenner">
-                Abonnez-vous à votre calendrier
+                Abonnez-vous à votre agenda
             </a>
             <span
                 class="events position-absolute top-0 translate-middle-y badge rounded-pill bg-danger border border-white border-2"
@@ -129,7 +129,7 @@
         <div class="form-floating mb-3">
             <input type="url" id="calendar" name="calendar" class="form-control is-invalid pe-none disabled"
                 placeholder="calendar" disabled="true" readonly="true" style="cursor:pointer;" onclick="clipboard(`#calendar`)">
-            <label for="calendar">Calendrier</label>
+            <label for="calendar">Agenda</label>
         </div>
 
         <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3"></div>
