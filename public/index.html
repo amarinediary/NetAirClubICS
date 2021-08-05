@@ -18,6 +18,8 @@
             Décollage
         </button>
 
+        <h5 class="text-muted">1.</h5>
+
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMain">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title">NetAirClubICS</h5>
@@ -25,22 +27,22 @@
             </div>
             <div class="offcanvas-body">
                 <div class="d-grid mb-3">
-                    <a href="https://github.com/amarinediary/NetAirClubICS/issues/new" class="btn btn-light text-truncate text-truncate" target="_blank" rel="noopenner">
+                    <a href="https://github.com/amarinediary/NetAirClubICS/issues/new" class="btn btn-light text-truncate" target="_blank" rel="noopenner">
                         <span class="me-1">🔖</span> Ouvrir un ticket
                     </a>
                 </div>
                 <div class="d-grid mb-3">
-                    <a href="https://www.paypal.com/paypalme/brizzipaul" class="btn btn-warning text-truncate text-truncate" target="_blank" rel="noopenner">
+                    <a href="https://www.paypal.com/paypalme/brizzipaul" class="btn btn-warning text-truncate" target="_blank" rel="noopenner">
                         <span class="me-1">☕</span> Offrez-moi un café
                     </a>
                 </div>
                 <div class="d-grid mb-3">
-                    <a href="https://forms.gle/xbmfzgEk4dJEBAMK7" class="btn btn-light text-truncate text-truncate" target="_blank" rel="noopenner">
+                    <a href="https://forms.gle/xbmfzgEk4dJEBAMK7" class="btn btn-light text-truncate" target="_blank" rel="noopenner">
                         <span class="me-1">👋</span> Un projet? Et si on en parlait?
                     </a>
                 </div>
                 <div class="d-grid mb-3">
-                    <a href="https://github.com/amarinediary/NetAirClubICS/" class="btn btn-dark text-truncate text-truncate" target="_blank" rel="noopenner">
+                    <a href="https://github.com/amarinediary/NetAirClubICS/" class="btn btn-light text-truncate" target="_blank" rel="noopenner">
                         <b>GitHub</b>
                     </a>
                 </div>
@@ -94,24 +96,27 @@
             <div class="form-floating mb-3">
                 <input type="text" id="login" name="login" class="form-control is-invalid" placeholder="Login"
                     required>
-                <label for="login">Login</label>
+                <label for="login">Identifiant</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="password" id="password" name="password" class="form-control is-invalid"
                     placeholder="Password" required>
-                <label for="password">Password</label>
+                <label for="password">Mot de passe</label>
             </div>
             <div class="d-grid mb-3">
                 <button type="submit" id="submit" name="submit" class="btn btn-success text-truncate pe-none"
                     disabled="true" readonly="true" style="height:40px;">
-                    Mettez à jour vôtre calendrier, <u>+31 jours glissant</u>
+                    Mettez à jour votre calendrier, <u>+31 jours glissant</u>
                 </button>
             </div>
         </form>
 
+        <h5 class="text-muted">2.</h5>
+        <p class="text-danger">Vous êtes déjà abonné•e•s? Vous n'avez plus rien à faire!</p>
+        <p><pre class="d-inline" style="background-color:#F8FBB8;">(IOS, macOS)</pre> Abonnez-vous à vôtre calendrier en un clic</p>
         <div class="d-grid mb-3 position-relative">
-            <a href="#!" id="webcal" class="btn btn-primary text-truncate pe-none disabled" style="height:40px;" disabled="true" readonly="true">
-                Abonnez-vous à vôtre calendrier (IOS, macOS)
+            <a href="#!" id="webcal" class="btn btn-primary text-truncate pe-none disabled" style="height:40px;" disabled="true" readonly="true" target="_blank" rel="noopenner">
+                Abonnez-vous à vôtre calendrier
             </a>
             <span
                 class="events position-absolute top-0 translate-middle-y badge rounded-pill bg-danger border border-white border-2"
@@ -119,6 +124,8 @@
                 0+
             </span>
         </div>
+
+        <p><pre class="d-inline" style="background-color:#F8FBB8;">(Android, Windows, Autre)</pre> Copier le lien suivant et abonnez-vous via votre calendrier préféré</p>
         <div class="form-floating mb-3">
             <input type="url" id="calendar" name="calendar" class="form-control pe-none disabled"
                 placeholder="calendar" disabled="true" readonly="true" style="cursor:pointer;" onclick="clipboard(`#calendar`)">

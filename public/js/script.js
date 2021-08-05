@@ -148,7 +148,6 @@ $(() => {
 });
 
 function clipboard(element) {
-    console.log(`click`);
     let stamp = Date.now();
     $('.toast-container').append(`<div id="toast-${stamp}" class="toast align-items-center text-white bg-secondary border-0 mb-3 hide" style="max-width:100%;"><div class="d-flex"><div class="toast-body text-truncate">Ajouter au presse-papier</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button></div></div>`);
     new bootstrap.Toast($(`#toast-${stamp}`)).show();
