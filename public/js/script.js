@@ -119,7 +119,7 @@ $(() => {
 
                         $("#calendar").prop({
                             'disabled': false,
-                        }).removeClass('disabled pe-none');
+                        }).removeClass('is-invalid disabled pe-none').addClass('is-valid');
                         
                         $('#webcal').attr('href', response.webcal);
                         $('#calendar').val(response.calendar);
