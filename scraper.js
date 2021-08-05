@@ -35,7 +35,8 @@ let scraper = async (aeroclub, login, password, host) => {
     let events = [], 
         fileID = [],
         found = '0',
-        webcal;
+        webcal, 
+        calendar;
 
     let netairclub = {
         index: `https://app.netairclub.com/${aeroclub}/index.php`,
@@ -227,6 +228,8 @@ let scraper = async (aeroclub, login, password, host) => {
                 found = bookings.length;
                 
                 webcal = `webcal://${host}/ics/${fileID}.ics`;
+
+                calendar = `https://${host}/ics/${fileID}.ics`;
             };
         } else {
             url = page.url();
@@ -240,6 +243,7 @@ let scraper = async (aeroclub, login, password, host) => {
         ...status && ({ status }),
         ...found && ({ found }),
         ...webcal && ({ webcal }),
+        ...calendar && ({ calendar }),
     });
 
     return {
@@ -247,6 +251,7 @@ let scraper = async (aeroclub, login, password, host) => {
         ...status && ({ status }),
         ...found && ({ found }),
         ...webcal && ({ webcal }),
+        ...calendar && ({ calendar }),
     };
 
 }; module.exports = scraper;

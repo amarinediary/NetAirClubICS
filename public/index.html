@@ -6,173 +6,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./css/stylesheet.css">
     <title>NetAirClubICS</title>
 </head>
 
 <body>
-    <main class="container py-5">
-        <form type="POST" class="card">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <div class="form-floating">
-                        <select id="aeroclub" name="aeroclub" class="form-select text-capitalize" required>
-                            <option value="acvl" id="acvl">aéroclub de la vallée du loing</option>
-                            <option value="acbourges" id="acbourges">aéroclub vol moteur bourges</option>
-                            <option value="acsommer" id="acsommer">aéroclub roger sommer</option>
-                            <option value="acbelves" id="acbelves">aéroclub belves périgord</option>
-                            <option value="acquercy" id="acquercy">aéroclub du quercy</option>
-                            <option value="acdelatranche" id="acdelatranche">aéroclub de la tranche sur mer</option>
-                            <option value="acrouergue" id="acrouergue">aéroclub du rouergue</option>
-                            <option value="acpaulmetairie" id="acpaulmetairie">aéroclub paul métairie la flèche</option>
-                            <option value="aproannais" id="aproannais">amicale des pilotes du roannais</option>
-                            <option value="acroyansoulac" id="acroyansoulac">aéroclub de royan et soulac</option>
-                            <option value="acdandaines" id="acdandaines">aéroclub d'andaines</option>
-                            <option value="clap73" id="clap73">aéroclub clap 73 challes les eaux</option>
-                            <option value="acdeauville" id="acdeauville">aéroclub de deauville</option>
-                            <option value="acfigari" id="acfigari">aéroclub figari sud corse</option>
-                            <option value="ulmloisirmontargis" id="ulmloisirmontargis">ULM Loisir Montargis</option>
-                            <option value="acol" id="acol">aéroclub du loiret orléans</option>
-                            <option value="unac" id="unac">union aérienne de chateauneuf sur cher</option>
-                            <option value="accosne" id="accosne">aéroclub de cosne sur loire</option>
-                            <option value="acdieppe" id="acdieppe">aéroclub de dieppe</option>
-                            <option value="lesailesardennaises" id="lesailesardennaises">aéroclub des ailes ardennaises
-                            </option>
-                            <option value="acangerien" id="acangerien">aéroclub angérien</option>
-                            <option value="acpons" id="acpons">aéroclub de pons</option>
-                            <option value="acbf" id="acbf">aéroclub brest finistère</option>
-                            <option value="acjeanmermoz" id="acjeanmermoz">aéroclub jean mermoz de ribérac</option>
-                            <option value="royanaircraft" id="royanaircraft">royan aircraft</option>
-                            <option value="caroannais" id="caroannais">club aéronautique roannais</option>
-                            <option value="acgrandslacs" id="acgrandslacs">aéroclub des grands lacs</option>
-                            <option value="enac" id="enac">aéroclub de biscarrosse des personnels de l'ENAC</option>
-                            <option value="acaubigny" id="acaubigny">aéroclub de aubigny sur nère</option>
-                            <option value="acmp" id="acmp">aéroclub de marseille provence</option>
-                            <option value="martiniqueeasyfly" id="martiniqueeasyfly">aéroclub martinique easyfly
-                            </option>
-                            <option value="aclucon" id="aclucon">aéroclub des voureuils luçon chasnais</option>
-                            <option value="acfontenay" id="acfontenay">aéroclub de fontenay le comte</option>
-                            <option value="ulmevasion" id="ulmevasion">ULM Evasion</option>
-                            <option value="lac" id="lac">aéroclub de libourne</option>
-                            <option value="accomminges" id="accomminges">aéroclub du comminges</option>
-                        </select>
-                        <label for="aeroclub">Aeroclub</label>
-                    </div>
-                </li>
-                <li class="list-group-item border-bottom-0">
-                    <div class="form-floating">
-                        <input type="text" id="login" name="login" class="form-control is-invalid" placeholder="Login"
-                            required>
-                        <label for="login">Login</label>
-                    </div>
-                </li>
-                <li class="list-group-item border-bottom-0">
-                    <div class="form-floating">
-                        <input type="password" id="password" name="password" class="form-control is-invalid"
-                            placeholder="Password" required>
-                        <label for="password">Password</label>
-                    </div>
-                </li>
-                <li class="list-group-item border-bottom-0">
-                    <div id="submit-container" class="d-grid">
-                        <button type="submit" id="submit" name="submit" class="btn btn-success text-truncate pe-none"
-                            disabled="true" readonly="true">
-                            Mettez à jour vôtre calendrier <span class="badge bg-light text-dark">.ics</span>, <u>+31
-                                jours glissant</u>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-        </form>
+    <main class="container" style="max-width: 960px;">
 
-        <section id="results" class="d-none">
-            <ul class="nav nav-pills nav-justified my-3" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="pills-mac-tab" data-bs-toggle="pill" data-bs-target="#pills-mac"
-                        type="button" role="tab" aria-controls="pills-mac" aria-selected="true">
-                        IOS, macOS
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link text-truncate" id="pills-pc-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-pc" type="button" role="tab" aria-controls="pills-pc"
-                        aria-selected="false">
-                        Android, Windows, Autres
-                    </button>
-                </li>
-            </ul>
+        <button class="btn btn-primary my-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMain" aria-controls="offcanvasMain" style="height:40px;">
+            Décollage
+        </button>
 
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="pills-mac" role="tabpanel" aria-labelledby="pills-home-tab">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Comment s'abonner à mon calendrier <span
-                                    class="badge bg-light text-dark">.ics</span></h5>
-                            <p class="card-text">
-                                <span class="text-danger">Vous êtes déja abonnez? Vous n'avez rien à faire!</span><br>
-                                Sinon:
-                            <ol>
-                                <li>Cliquer sur le boutton d'abonnement <u>webcal://</u></li>
-                                <li>Suivez les instructions à l'écran pour ajouter vôtre calendrier</li>
-                            </ol>
-                            Si possible, nous vous recommandons de sélectionner un taux de rafraîchissement proche de 5
-                            minutes
-                            </p>
-                        </div>
-                        <ul class="list-group list-group-flush border-top-0">
-                            <li class="list-group-item">
-                                <div class="d-grid position-relative">
-                                    <a href="#!" id="webcal-href" class="btn btn-success text-truncate">
-                                        Abonnez-vous à vôtre calendrier <span
-                                            class="badge bg-light text-dark">.ics</span>, via
-                                        <u>webcall://</u>, (si ce n'est pas déjà le cas)
-                                    </a>
-                                    <span
-                                        class="events-counter position-absolute top-0 translate-middle-y badge rounded-pill bg-danger border border-white border-2"
-                                        style="right:-10px;">
-                                        0+
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMain">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">NetAirClubICS</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="d-grid mb-3">
+                    <a href="https://github.com/amarinediary/NetAirClubICS/issues/new" class="btn btn-light text-truncate text-truncate" target="_blank" rel="noopenner">
+                        <span class="me-1">🔖</span> Ouvrir un ticket
+                    </a>
                 </div>
-                <div class="tab-pane fade" id="pills-pc" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Comment s'abonner à mon calendrier <span
-                                    class="badge bg-light text-dark">.ics</span></h5>
-                            <p class="card-text">
-                                <span class="text-danger">Vous êtes déja abonnez? Vous n'avez rien à faire!</span><br>
-                                Sinon:
-                            <ol>
-                                <li>Copier le lien d'abonnement <u>webcal://</u></li>
-                                <li>Ajouter un abonnement sur vôtre calendrier préféré</li>
-                            </ol>
-                            Si possible, nous vous recommandons de sélectionner un taux de rafraîchissement proche de 5
-                            minutes
-                            </p>
-                        </div>
-                        <ul class="list-group list-group-flush border-top-0">
-                            <li class="list-group-item">
-                                <div class="input-group w-100">
-                                    <input type="url" id="webcal-input" class="form-control" readonly>
-                                    <div class="position-relative">
-                                        <button type="button" class="btn btn-success"
-                                            onclick="clipboard('#webcal-input');">Copier</button>
-                                        <span
-                                            class="events-counter position-absolute top-0 translate-middle-y badge rounded-pill bg-danger border border-white border-2"
-                                            style="right:-10px;z-index:99;">
-                                            0+
-                                        </span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="d-grid mb-3">
+                    <a href="https://www.paypal.com/paypalme/brizzipaul" class="btn btn-warning text-truncate text-truncate" target="_blank" rel="noopenner">
+                        <span class="me-1">☕</span> Offrez-moi un café
+                    </a>
+                </div>
+                <div class="d-grid mb-3">
+                    <a href="https://forms.gle/xbmfzgEk4dJEBAMK7" class="btn btn-light text-truncate text-truncate" target="_blank" rel="noopenner">
+                        <span class="me-1">👋</span> Un projet? Et si on en parlait?
+                    </a>
+                </div>
+                <div class="d-grid mb-3">
+                    <a href="https://github.com/amarinediary/NetAirClubICS/" class="btn btn-dark text-truncate text-truncate" target="_blank" rel="noopenner">
+                        <b>GitHub</b>
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <form type="POST">
+            <div class="form-floating mb-3">
+                <select id="aeroclub" name="aeroclub" class="form-select text-capitalize" required>
+                    <option value="acvl" id="acvl">aéroclub de la vallée du loing</option>
+                    <option value="acbourges" id="acbourges">aéroclub vol moteur bourges</option>
+                    <option value="acsommer" id="acsommer">aéroclub roger sommer</option>
+                    <option value="acbelves" id="acbelves">aéroclub belves périgord</option>
+                    <option value="acquercy" id="acquercy">aéroclub du quercy</option>
+                    <option value="acdelatranche" id="acdelatranche">aéroclub de la tranche sur mer</option>
+                    <option value="acrouergue" id="acrouergue">aéroclub du rouergue</option>
+                    <option value="acpaulmetairie" id="acpaulmetairie">aéroclub paul métairie la flèche</option>
+                    <option value="aproannais" id="aproannais">amicale des pilotes du roannais</option>
+                    <option value="acroyansoulac" id="acroyansoulac">aéroclub de royan et soulac</option>
+                    <option value="acdandaines" id="acdandaines">aéroclub d'andaines</option>
+                    <option value="clap73" id="clap73">aéroclub clap 73 challes les eaux</option>
+                    <option value="acdeauville" id="acdeauville">aéroclub de deauville</option>
+                    <option value="acfigari" id="acfigari">aéroclub figari sud corse</option>
+                    <option value="ulmloisirmontargis" id="ulmloisirmontargis">ULM Loisir Montargis</option>
+                    <option value="acol" id="acol">aéroclub du loiret orléans</option>
+                    <option value="unac" id="unac">union aérienne de chateauneuf sur cher</option>
+                    <option value="accosne" id="accosne">aéroclub de cosne sur loire</option>
+                    <option value="acdieppe" id="acdieppe">aéroclub de dieppe</option>
+                    <option value="lesailesardennaises" id="lesailesardennaises">aéroclub des ailes ardennaises
+                    </option>
+                    <option value="acangerien" id="acangerien">aéroclub angérien</option>
+                    <option value="acpons" id="acpons">aéroclub de pons</option>
+                    <option value="acbf" id="acbf">aéroclub brest finistère</option>
+                    <option value="acjeanmermoz" id="acjeanmermoz">aéroclub jean mermoz de ribérac</option>
+                    <option value="royanaircraft" id="royanaircraft">royan aircraft</option>
+                    <option value="caroannais" id="caroannais">club aéronautique roannais</option>
+                    <option value="acgrandslacs" id="acgrandslacs">aéroclub des grands lacs</option>
+                    <option value="enac" id="enac">aéroclub de biscarrosse des personnels de l'ENAC</option>
+                    <option value="acaubigny" id="acaubigny">aéroclub de aubigny sur nère</option>
+                    <option value="acmp" id="acmp">aéroclub de marseille provence</option>
+                    <option value="martiniqueeasyfly" id="martiniqueeasyfly">aéroclub martinique easyfly
+                    </option>
+                    <option value="aclucon" id="aclucon">aéroclub des voureuils luçon chasnais</option>
+                    <option value="acfontenay" id="acfontenay">aéroclub de fontenay le comte</option>
+                    <option value="ulmevasion" id="ulmevasion">ULM Evasion</option>
+                    <option value="lac" id="lac">aéroclub de libourne</option>
+                    <option value="accomminges" id="accomminges">aéroclub du comminges</option>
+                </select>
+                <label for="aeroclub">Aeroclub</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" id="login" name="login" class="form-control is-invalid" placeholder="Login"
+                    required>
+                <label for="login">Login</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" id="password" name="password" class="form-control is-invalid"
+                    placeholder="Password" required>
+                <label for="password">Password</label>
+            </div>
+            <div class="d-grid mb-3">
+                <button type="submit" id="submit" name="submit" class="btn btn-success text-truncate pe-none"
+                    disabled="true" readonly="true" style="height:40px;">
+                    Mettez à jour vôtre calendrier <span class="badge bg-light text-dark">.ics</span>, <u>+31
+                        jours glissant</u>
+                </button>
+            </div>
+        </form>
+
+        <div class="d-grid mb-3 position-relative">
+            <a href="#!" id="webcal" class="btn btn-primary text-truncate pe-none disabled" style="height:40px;" disabled="true" readonly="true">
+                Abonnez-vous à vôtre calendrier (IOS, macOS)
+            </a>
+            <span
+                class="events position-absolute top-0 translate-middle-y badge rounded-pill bg-danger border border-white border-2"
+                style="right:-10px;">
+                0+
+            </span>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="url" id="calendar" name="calendar" class="form-control pe-none disabled"
+                placeholder="calendar" disabled="true" readonly="true" style="cursor:pointer;" onclick="clipboard(`#calendar`)">
+            <label for="calendar">Calendrier</label>
+        </div>
 
         <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3"></div>
 
@@ -183,10 +135,6 @@
                 <span class="spinner-border text-light" role="status"></span>
             </span>
         </div>
-
-        <p class="mt-3 text-center"><a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfJlmh6h8bczuHUULC9I_sbsDDOlBkb9l6So9Q-D7TiMxuIcw/viewform?usp=pp_url"
-                target="_blank" rel="noopener">👋 Un projet? Contactez moi!</a></p>
 
     </main>
 
