@@ -1,3 +1,3 @@
 # NetAirClubICS
- 
-Unofficial `.ics` add to calendar file generator, for the NetAirClub® https://www.netairclub.com/ software.
+
+Abonnez-vous à votre agenda NetAirClub® en un clic! NetAirClubICS est un générateur de fichier .ics non-officiel pour le logiciel NetAirClub®, outil de gestion pour associations aéronautiques & aéroclub.
