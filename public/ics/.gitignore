@@ -1,2 +1,3 @@
 !.gitignore
 *.ics
+.DS_Store
