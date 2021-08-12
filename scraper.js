@@ -44,7 +44,9 @@ let scraper = async (aeroclub, login, password, host) => {
         members: `https://app.netairclub.com/${aeroclub}/liste_mb.php`,
     };
 
-    let browser = await puppeteer.launch();
+    let browser = await puppeteer.launch({
+        headless: true,
+    });
     let page = await browser.newPage();
     await page.setRequestInterception(!0), page.on(`request`, (page => {
 
@@ -164,12 +166,17 @@ let scraper = async (aeroclub, login, password, host) => {
                         };
                     });
 
+                    /*
                     if (organizer.every((v,i) => v === attendee[i])) {    
                         organizer = attendee = ``;
                     } else {
                         organizer = `Organizer: ${organizer}`;
                         attendee = `Attendee: ${attendee}`;
                     };
+                    */
+
+                    organizer = `Organizer: ${organizer}`;
+                    attendee = `Attendee: ${attendee}`;
 
                     let description = {
                         ...destination && ({ destination }),
